@@ -35,21 +35,21 @@ export class BaseComponent {
   subItems2 = [
     {
       title: 'Sub-item',
-      content: 'Content for Sub-item 2.1',
+      content: 'Content for Sub-item',
       subItems: [
         {
           title: 'Sub-sub-item',
           content: 'Content for Sub-sub-item',
           subItems: [
-            { title: 'Sub-sub-sub-item 5', content: 'Content for Sub-sub-sub-item 5' },
-            { title: 'Sub-sub-sub-item 6', content: 'Content for Sub-sub-sub-item 6' },
+            { title: 'Sub-sub-sub-item ', content: 'Content for Sub-sub-sub-item ' },
+            { title: 'Sub-sub-sub-item ', content: 'Content for Sub-sub-sub-item ' },
           ],
         },
-        { title: 'Sub-sub-item 2', content: 'Content for Sub-sub-item 2' },
+        { title: 'Sub-sub-item 2', content: 'Content for Sub-sub-item ' },
       ],
     },
-    { title: 'Sub-item 2', content: 'Content for Sub-item 2' },
-    { title: 'Sub-item 3', content: 'Content for Sub-item 3' },
+    { title: 'Sub-item ', content: 'Content for Sub-item ' },
+    { title: 'Sub-item', content: 'Content for Sub-item' },
   ];
 
 }
