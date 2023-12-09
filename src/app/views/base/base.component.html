@@ -1,0 +1,42 @@
+
+
+
+
+
+  <div class="">
+    <app-accordion title="HR Dashboard">
+      <ng-container *ngFor="let subItem of subItems1">
+        <app-accordion [title]="subItem.title">
+          <ng-container *ngFor="let subSubItem of subItem.subItems">
+            <app-accordion [title]="subSubItem.title">
+              <ng-container *ngFor="let subSubSubItem of subSubItem.subItems">
+                <app-accordion [title]="subSubSubItem.title">
+                  {{ subSubSubItem.content }}
+                </app-accordion>
+              </ng-container>
+            </app-accordion>
+          </ng-container>
+        </app-accordion>
+      </ng-container>
+    </app-accordion>
+
+    <app-accordion title="HR Resume">
+      {{ subItems1[1].content }}
+    </app-accordion>
+
+    <app-accordion title="Sub-item">
+      <ng-container *ngFor="let subItem of subItems2">
+        <app-accordion [title]="subItem.title">
+          <ng-container *ngFor="let subSubItem of subItem.subItems">
+            <app-accordion [title]="subSubItem.title">
+              <ng-container *ngFor="let subSubSubItem of subSubItem.subItems">
+                <app-accordion [title]="subSubSubItem.title">
+                  {{ subSubSubItem.content }}
+                </app-accordion>
+              </ng-container>
+            </app-accordion>
+          </ng-container>
+        </app-accordion>
+      </ng-container>
+    </app-accordion>
+  </div>

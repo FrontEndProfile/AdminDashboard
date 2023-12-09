@@ -1,0 +1,24 @@
+<!-- accordion.component.html -->
+<div class="border-0">
+  <div
+    class="flex items-center justify-between p-2 cursor-pointer"
+    (click)="toggle()"
+  >
+    <h2 class="text-lg font-semibold">{{ title }}</h2>
+    <span [class.rotate]="expanded" class="transform transition-transform"
+      >&#11157;</span
+    >
+  </div>
+  <div [@expandCollapse]="expanded ? 'expanded' : 'collapsed'" class="">
+    <div class="p-2">
+      <ng-content></ng-content>
+      <div *ngIf="expanded">
+        <ng-container *ngFor="let item of subItems">
+          <app-accordion [title]="item.title">
+            {{ item.content }}
+          </app-accordion>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

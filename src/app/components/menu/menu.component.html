@@ -1,0 +1,22 @@
+<ul>
+  <li *ngFor="let item of menuItems">
+    <input type="checkbox" [id]="'item_' + item.id" />
+    <label [for]="'item_' + item.id">{{ item.name }}</label>
+    
+    <!-- Sub-items -->
+    <ul *ngIf="item.children">
+      <li *ngFor="let subItem of item.children">
+        <input type="checkbox" [id]="'subItem_' + subItem.id" />
+        <label [for]="'subItem_' + subItem.id">{{ subItem.name }}</label>
+        
+        <!-- Sub-sub-items -->
+        <ul *ngIf="subItem.children">
+          <li *ngFor="let subSubItem of subItem.children">
+            <input type="checkbox" [id]="'subSubItem_' + subSubItem.id" />
+            <label [for]="'subSubItem_' + subSubItem.id">{{ subSubItem.name }}</label>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
