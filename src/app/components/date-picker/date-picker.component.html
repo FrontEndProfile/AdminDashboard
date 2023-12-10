@@ -1,0 +1,11 @@
+<mat-card class="w-fit">
+    <mat-card-content class="p-5">
+      <h2>Date Picker Card</h2>
+  
+      <mat-card class="demo-inline-calendar-card w-96 mb-3">
+        <mat-calendar ngSkipHydration [(selected)]="selected"></mat-calendar>
+      </mat-card>
+      <p>Selected date: {{ selected }}</p>
+    </mat-card-content>
+  </mat-card>
+  

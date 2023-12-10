@@ -1,8 +1,7 @@
-import { NgModule, LOCALE_ID } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -10,12 +9,19 @@ import { BaseComponent } from './views/base/base.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { HomeComponent } from './views/home/home.component';
 import { CardComponent } from './views/card/card.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatIconModule} from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { DropDownComponent } from './components/drop-down/drop-down.component';
+import { DatePickerComponent } from './components/date-picker/date-picker.component';
 
 
-import { defineLocale } from 'ngx-bootstrap/chronos';
-import { enGbLocale } from 'ngx-bootstrap/locale';
+import {FormsModule} from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
 
-defineLocale('en-gb', enGbLocale);
 
 
 @NgModule({
@@ -26,14 +32,25 @@ defineLocale('en-gb', enGbLocale);
     AccordionComponent,
     HomeComponent,
     CardComponent,
+    DropDownComponent,
+    DatePickerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    BsDatepickerModule.forRoot()
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatIconModule,
+    MatCardModule,
+    FormsModule,
+    MatSelectModule
+
+    
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'en-gb' },
+  providers: [
     provideClientHydration()
   ],
   bootstrap: [AppComponent]
