@@ -19,8 +19,14 @@ import { DropDownComponent } from './components/drop-down/drop-down.component';
 import { DatePickerComponent } from './components/date-picker/date-picker.component';
 
 
+
 import {FormsModule} from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MultiCheckerComponent } from './components/multi-checker/multi-checker.component';
+import { FormslayoutComponent } from './components/formslayout/formslayout.component';
+import { TableComponent } from './components/table/table.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -34,6 +40,11 @@ import {MatSelectModule} from '@angular/material/select';
     CardComponent,
     DropDownComponent,
     DatePickerComponent,
+    DropDownComponent,
+    MultiCheckerComponent,
+    FormslayoutComponent,
+    TableComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -46,8 +57,10 @@ import {MatSelectModule} from '@angular/material/select';
     MatIconModule,
     MatCardModule,
     FormsModule,
-    MatSelectModule
-
+    MatSelectModule,
+    MatCheckboxModule,
+    MatTableModule
+    
     
   ],
   providers: [

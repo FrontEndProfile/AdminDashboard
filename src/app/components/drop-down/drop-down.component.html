@@ -1,11 +1,59 @@
-<mat-form-field>
-  <mat-label>Select an option</mat-label>
-  <mat-select [(value)]="selected">
-    <mat-option>None</mat-option>
-    <mat-option value="option1">Option 1</mat-option>
-    <mat-option value="option2">Option 2</mat-option>
-    <mat-option value="option3">Option 3</mat-option>
-  </mat-select>
-</mat-form-field>
+<mat-card class="w-fit">
+  <mat-card-content class="p-5">
+    <h2>DropDown & Select Card</h2>
 
-<p>You selected: {{selected}}</p>
+    <div class="flex gap-6">
+
+      <div>
+        <mat-form-field>
+          <mat-label>Select an option</mat-label>
+          <mat-select [(value)]="selected">
+            <mat-option>None</mat-option>
+            <mat-option value="option1">Option 1</mat-option>
+            <mat-option value="option2">Option 2</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+          </mat-select>
+        </mat-form-field>
+    
+        <p>You selected: {{ selected }}</p>
+    
+      </div>
+
+      <div class="">
+        <div class="group relative">
+            <button class="bg-gray-800 text-white px-6 h-10 w-60  rounded">DropDown</button>
+            <nav tabindex="0" class="border border-2 bg-white invisible border-gray-800 rounded w-60 absolute left-0 top-full transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
+                <ul class="py-1">
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                            Edit
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                            Delete
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                            Reply
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+    </div>
+
+
+
+
+
+
+  </mat-card-content>
+</mat-card>
+
+

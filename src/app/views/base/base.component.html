@@ -4,14 +4,18 @@
 
 
   <div class="">
-    <app-accordion title="HR Dashboard">
+    <app-accordion title="Dashboard">
       <ng-container *ngFor="let subItem of subItems1">
         <app-accordion [title]="subItem.title">
           <ng-container *ngFor="let subSubItem of subItem.subItems">
             <app-accordion [title]="subSubItem.title">
               <ng-container *ngFor="let subSubSubItem of subSubItem.subItems">
                 <app-accordion [title]="subSubSubItem.title">
-                  {{ subSubSubItem.content }}
+                  <ul>
+                    <li><a href={subSubSubItem.Link}>- Live</a></li>
+                  </ul>
+                  <!-- {{ subSubSubItem.content }} -->
+                  
                 </app-accordion>
               </ng-container>
             </app-accordion>
@@ -20,23 +24,9 @@
       </ng-container>
     </app-accordion>
 
-    <app-accordion title="HR Resume">
-      {{ subItems1[1].content }}
-    </app-accordion>
-
-    <app-accordion title="Sub-item">
+    <app-accordion title="Table Page">
       <ng-container *ngFor="let subItem of subItems2">
-        <app-accordion [title]="subItem.title">
-          <ng-container *ngFor="let subSubItem of subItem.subItems">
-            <app-accordion [title]="subSubItem.title">
-              <ng-container *ngFor="let subSubSubItem of subSubItem.subItems">
-                <app-accordion [title]="subSubSubItem.title">
-                  {{ subSubSubItem.content }}
-                </app-accordion>
-              </ng-container>
-            </app-accordion>
-          </ng-container>
-        </app-accordion>
+        <a class="font-medium text-base" routerLink="/table" routerLinkActive="active">Table Component</a>
       </ng-container>
     </app-accordion>
   </div>

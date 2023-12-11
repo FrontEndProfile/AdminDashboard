@@ -1,0 +1,27 @@
+<mat-card class="w-96">
+  <mat-card-content class="p-5">
+    <h2>Multi Felids Card</h2>
+
+    <mat-form-field class="w-full">
+      <input matInput placeholder="Simple Search"/>
+    </mat-form-field>
+
+    <mat-form-field class="w-full">
+      <input matInput placeholder="Icon Search" />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+
+
+    <mat-form-field class="w-full">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" class="w-full">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" class="pe-3">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+
+
+  </mat-card-content>
+
+</mat-card>

@@ -1,0 +1,13 @@
+/* dropdown.component.scss */
+button {
+    cursor: pointer;
+  }
+  
+  .absolute {
+    display: none;
+  }
+  
+  .relative:hover .absolute {
+    display: block;
+  }
+  

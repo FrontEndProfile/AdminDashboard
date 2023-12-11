@@ -12,7 +12,7 @@ export class AppComponent {
   menuData = [
     {
       "id": 1,
-      "name": "Item 1",
+      "name": "TEST",
       "children": [
         {
           "id": 2,
